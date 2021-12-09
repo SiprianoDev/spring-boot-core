@@ -1,18 +1,18 @@
 package com.study.sipriano;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 @Configuration//Container IOC
+@Profile("des")
 public class MyConfiguration {
 
-    @Bean(name = "applicationName")//Container IOC, o único que é em método
-    public String appName(){
-        return "Sistema de vendas";
-    }
-
-    @Bean(name = "applicationName2")
-    public String applicationName2(){
-        return "Sistema de vendas 2";
+    @Bean
+    public CommandLineRunner executar(){
+        return args -> {
+            System.out.println("Rodando a configuração de desenvolvimento");
+        };
     }
 }

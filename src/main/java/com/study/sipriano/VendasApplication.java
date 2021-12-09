@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class VendasApplication {
 
-    @Value("${application.name}")
+    @Value("${application.name}")//pega o aplication.name do properties correspondente
     private String appName;
 
     @GetMapping("/hello")
