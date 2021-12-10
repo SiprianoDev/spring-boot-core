@@ -5,8 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-@Configuration//Container IOC
-@Profile("des")
+@Development//Annotations personalizadas
 public class MyConfiguration {
 
     @Bean
