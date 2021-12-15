@@ -18,6 +18,7 @@ public class VendasApplication {
     @Value("${application.name}")//pega o aplication.name do properties correspondente
     private String appName;
 
+
     @Cachorro//é só mudar pra gato ou cachorro
     private Animal animal;
 
